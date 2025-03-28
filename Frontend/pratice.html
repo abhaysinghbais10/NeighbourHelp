@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue</title>
+    <link rel="stylesheet" href="pratice.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Report an Issue</h1>
+            <p>We're here to help! Please provide detailed information about the issue you're experiencing.</p>
+        </div>
+
+        <form class="issue-form" id="issueReportForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="issueType">Issue Type</label>
+                <select id="issueType" name="issueType" required>
+                    <option value="">Select Issue Type</option>
+                    <option value="technical">Uncollected Garbage</option>
+                    <option value="billing">Broken Streetlight</option>
+                    <option value="feature">Pothole</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Issue Priority</label>
+                <div class="priority-group">
+                    <div class="priority-option">
+                        <input type="radio" id="low" name="priority" value="low" required>
+                        <label for="low">Low</label>
+                    </div>
+                    <div class="priority-option">
+                        <input type="radio" id="medium" name="priority" value="medium">
+                        <label for="medium">Medium</label>
+                    </div>
+                    <div class="priority-option">
+                        <input type="radio" id="high" name="priority" value="high">
+                        <label for="high">High</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Issue Description</label>
+                <textarea id="description" name="description" required placeholder="Provide a detailed description of the issue. Include steps to reproduce, expected behavior, and actual behavior."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Issue Report</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('issueReportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                issueType: document.getElementById('issueType').value,
+                priority: document.querySelector('input[name="priority"]:checked').value,
+                description: document.getElementById('description').value
+            };
+
+            // In a real application, you would send this data to a server
+            console.log('Issue Report Submitted:', formData);
+            
+            // Show confirmation
+            alert('Thank you for reporting the issue. We will review it shortly.');
+            
+            // Reset the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

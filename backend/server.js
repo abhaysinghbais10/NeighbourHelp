@@ -8,8 +8,10 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({
-    origin: "http://127.0.0.1:8080",  // Corrected to remove extra space
-}));
+    origin: "http://127.0.0.1:5500", // Allow frontend origin
+    methods: "GET, POST", // Allow specific methods (GET, POST, etc.)
+    allowedHeaders: "Content-Type, Authorization" // Allow specific headers
+  }));
 //middleware
 app.use(express.json());
 app.use(morgan("dev"));

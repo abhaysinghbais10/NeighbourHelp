@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeighbourHelp - Neighborhood Issue Reporting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NeighbourHelp</h1>
+                <p class="tagline">Making neighborhoods better together</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active">Home</a></li>
+                    <li><a class="active">Report Issue</a></li>
+                    <li><a> Track Reports</a></li>
+                    <li><a class ="active">About</a></li>
+                    <li><a class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Report Neighborhood Issues in Minutes</h2>
+                <p>Help improve your community by reporting potholes, broken streetlights, uncollected garbage, and more.</p>
+                <a href="#report-form" class="btn-primary">Report an Issue</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <div class="placeholder-text"> 
+                        <img src="https://www.shutterstock.com/image-vector/peace-conflict-resolution-concept-neighbours-260nw-1975030457.jpg" alt="Description of Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Report an Issue</h3>
+                    <p>Fill out the simple form with details and photos of the problem.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Authorities Notified</h3>
+                    <p>Local authorities receive detailed information about the issue.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Track Progress</h3>
+                    <p>Follow the status of your report from submission to resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="report-form" id="report-form">
+        <div class="container">
+            <h2>Report an Issue</h2>
+            <form>
+                <div class="form-group">
+                    <label for="issue-type">Issue Type</label>
+                    <select id="issue-type" required>
+                        <option value="" disabled selected>Select issue type</option>
+                        <option value="pothole">Pothole</option>
+                        <option value="streetlight">Broken Streetlight</option>
+                        <option value="garbage">Uncollected Garbage</option>
+                        <option value="graffiti">Graffiti</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter street address" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">PIN Code</label>
+                        <input type="text" id="zip" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" placeholder="Describe the issue in detail" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photo</label>
+                    <div class="file-upload">
+                        <input type="file" id="photo" accept="image/*">
+                        <div class="upload-placeholder">
+                            <span>Click to upload or drag and drop</span>
+                            <span class="small">JPG, PNG or GIF (max. 5MB)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Your Email</label>
+                    <input type="email" id="contact" placeholder="For updates on your report" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="recent-reports">
+        <div class="container">
+            <h2>Recent Reports</h2>
+            <div class="reports-grid">
+                <div class="report-card">
+                    <div class="report-status pending">Pending</div>
+                    <div class="report-image">
+                        <div class="image-placeholder">
+                            <div class="placeholder-text"></div>
+                        </div>
+                    </div>
+                    <div class="report-details">
+                        <h3>Pothole</h3>
+                        <p class="location">123 Main St, Downtown</p>
+                        <p class="date">Reported: March 25, 2025</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-status in-progress">In Progress</div>
+                    <div class="report-image">
+                        <div class="image-placeholder">
+                            <div class="placeholder-text">Streetlight Image</div>
+                        </div>
+                    </div>
+                    <div class="report-details">
+                        <h3>Broken Streetlight</h3>
+                        <p class="location">456 Oak Ave, Westside</p>
+                        <p class="date">Reported: March 22, 2025</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-status resolved">Resolved</div>
+                    <div class="report-image">
+                        <div class="image-placeholder">
+                            <div class="placeholder-text">Garbage Image</div>
+                        </div>
+                    </div>
+                    <div class="report-details">
+                        <h3>Uncollected Garbage</h3>
+                        <p class="location">789 Pine St, Eastside</p>
+                        <p class="date">Reported: March 18, 2025</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h3>1,248</h3>
+                <p>Issues Reported</p>
+            </div>
+            <div class="stat-item">
+                <h3>876</h3>
+                <p>Issues Resolved</p>
+            </div>
+            <div class="stat-item">
+                <h3>92%</h3>
+                <p>Resolution Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>3.2 Days</h3>
+                <p>Average Response Time</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Residents Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"I reported a pothole on my street and it was fixed within a week. This platform makes it so easy to get things done!"</p>
+                    <div class="testimonial-author">
+                        <p class="name">Sarah Johnson</p>
+                        <p class="location">Downtown Resident</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a senior citizen, I appreciate how simple this system is to use. I was able to report a broken streetlight without any hassle."</p>
+                    <div class="testimonial-author">
+                        <p class="name">Robert Chen</p>
+                        <p class="location">Westside Resident</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>CivicWatch</h2>
+                    <p>Making neighborhoods better together</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Report Issue</a></li>
+                            <li><a href="#">Track Reports</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CivicWatch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
